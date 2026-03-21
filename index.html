@@ -13,17 +13,34 @@
             line-height: 1.6;
         }
         .container { max-width: 700px; margin: 0 auto; padding: 60px 24px; }
-        h1 { font-size: 2.5rem; margin-bottom: 8px; }
+        .hero { text-align: center; margin-bottom: 48px; }
+        h1 { font-size: 3rem; margin-bottom: 8px; }
         .accent { color: #00FF41; }
-        .subtitle { color: #A0A0A0; font-size: 1.1rem; margin-bottom: 48px; }
+        .subtitle { color: #A0A0A0; font-size: 1.1rem; }
         h2 { font-size: 1.3rem; margin: 40px 0 16px; color: #FFFFFF; }
-        ul { list-style: none; padding: 0; }
-        ul li { padding: 8px 0; color: #A0A0A0; }
-        ul li strong { color: #FFFFFF; }
+        .card {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid #2A2A2A;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 12px;
+        }
+        .card-title { color: #FFFFFF; font-weight: 600; margin-bottom: 4px; }
+        .card-desc { color: #A0A0A0; font-size: 0.9rem; }
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        @media (max-width: 500px) {
+            .features-grid { grid-template-columns: 1fr; }
+        }
         a { color: #00FF41; text-decoration: none; }
         a:hover { text-decoration: underline; }
         .divider { border: none; border-top: 1px solid #2A2A2A; margin: 48px 0; }
-        .footer { color: #666666; font-size: 0.85rem; margin-top: 48px; }
+        .footer { color: #666666; font-size: 0.85rem; text-align: center; margin-top: 48px; }
         .badge {
             display: inline-block;
             background: #1A1A1A;
@@ -32,65 +49,95 @@
             padding: 4px 10px;
             font-size: 0.8rem;
             color: #A0A0A0;
-            margin-right: 6px;
+            margin: 0 3px;
         }
         .faq-q { color: #FFFFFF; font-weight: 600; margin-top: 20px; }
         .faq-a { color: #A0A0A0; margin-top: 4px; }
+        .section-text { color: #A0A0A0; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1><span class="accent">Vīra</span></h1>
-        <p class="subtitle">Your workout data, your way.</p>
+        <div class="hero">
+            <h1><span class="accent">Vīra</span></h1>
+            <p class="subtitle">Your workout data, your way.</p>
+        </div>
 
-        <p style="color: #A0A0A0;">
-            Vīra is a workout tracker built for people who care about their data.
-            Track exercises, log sets, monitor PRs, and visualize your progress —
+        <p class="section-text" style="text-align: center; margin-bottom: 32px;">
+            A workout tracker built for people who care about their data.
+            Track exercises, log sets, monitor PRs, and visualize progress —
             all stored locally on your device.
         </p>
 
         <h2>Features</h2>
-        <ul>
-            <li><strong>Workout Tracking</strong> — Exercises, sets, weight, reps, tempo, supersets</li>
-            <li><strong>100+ Exercises</strong> — Full library with instructions and muscle group filters</li>
-            <li><strong>Templates</strong> — Preset and custom workout templates</li>
-            <li><strong>PR Detection</strong> — Automatic personal records with 1RM estimation</li>
-            <li><strong>Analytics</strong> — Heatmap, PR trends, volume/TUT charts, effort scores</li>
-            <li><strong>Calorie Estimation</strong> — MET-based calorie burn per workout</li>
-            <li><strong>Cardio Support</strong> — Duration and distance tracking for cardio exercises</li>
-            <li><strong>Streaks</strong> — Daily or weekly streak tracking</li>
-            <li><strong>History</strong> — Weekly grouping with volume bars and PR badges</li>
-            <li><strong>Import</strong> — Bring your data from other apps via CSV</li>
-            <li><strong>Privacy First</strong> — No accounts, no cloud, no tracking</li>
-        </ul>
+        <div class="features-grid">
+            <div class="card">
+                <div class="card-title">Workout Tracking</div>
+                <div class="card-desc">Sets, weight, reps, tempo, supersets</div>
+            </div>
+            <div class="card">
+                <div class="card-title">100+ Exercises</div>
+                <div class="card-desc">Instructions & muscle group filters</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Templates</div>
+                <div class="card-desc">Preset & custom workout templates</div>
+            </div>
+            <div class="card">
+                <div class="card-title">PR Detection</div>
+                <div class="card-desc">Automatic 1RM tracking</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Analytics</div>
+                <div class="card-desc">Heatmap, trends, volume, TUT charts</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Calorie Estimation</div>
+                <div class="card-desc">MET-based burn per workout</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Cardio Support</div>
+                <div class="card-desc">Duration & distance tracking</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Streaks</div>
+                <div class="card-desc">Daily or weekly consistency</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Import & Export</div>
+                <div class="card-desc">CSV import/export with 170+ mappings</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Privacy First</div>
+                <div class="card-desc">No accounts, no cloud, no tracking</div>
+            </div>
+        </div>
 
         <h2>Privacy</h2>
-        <p style="color: #A0A0A0;">
+        <p class="section-text">
             Vīra does not collect, store, or transmit any personal data.
-            All workout data lives on your device. No analytics, no tracking,
-            no third-party services. <a href="privacy.html">Full privacy policy →</a>
+            Everything stays on your device.
+            <a href="privacy.html">Full privacy policy →</a>
         </p>
 
         <h2>Support</h2>
-        <p style="color: #A0A0A0;">
-            Having issues or have a suggestion?<br>
-            <strong>Email:</strong> <a href="mailto:parth.gulati@outlook.com">parth.gulati@outlook.com</a>
+        <p class="section-text">
+            <a href="mailto:parth.gulati@outlook.com">parth.gulati@outlook.com</a>
+            <br><span style="color: #666;">We typically respond within 48 hours.</span>
         </p>
-        <p style="color: #666; margin-top: 8px;">We typically respond within 48 hours.</p>
 
         <h2>FAQ</h2>
-
         <p class="faq-q">Is Vīra free?</p>
         <p class="faq-a">Yes, completely free. No ads, no subscriptions.</p>
 
         <p class="faq-q">Where is my data stored?</p>
-        <p class="faq-a">Everything is stored locally on your device. Nothing leaves your phone.</p>
+        <p class="faq-a">Locally on your device. Nothing leaves your phone.</p>
 
         <p class="faq-q">Can I import from another app?</p>
-        <p class="faq-a">Yes. Settings → Import from CSV. Supports standard workout exports with 170+ exercise name mappings.</p>
+        <p class="faq-a">Yes. Settings → Import from CSV.</p>
 
         <p class="faq-q">Will there be cloud sync?</p>
-        <p class="faq-a">We're considering it for a future update. Your existing features will always remain free.</p>
+        <p class="faq-a">Considering it for the future. Existing features stay free.</p>
 
         <hr class="divider">
 
