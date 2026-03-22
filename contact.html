@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VĪRA | Contact Us</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: { extend: {
+    colors: {
+      "primary": "#9cff93", "primary-container": "#00fc40", "on-primary": "#006413",
+      "background": "#0e0e0e", "surface": "#0e0e0e", "surface-container-low": "#131313",
+      "surface-container-high": "#201f1f",
+      "on-surface": "#ffffff", "on-surface-variant": "#adaaaa",
+      "outline-variant": "#494847",
+    },
+    fontFamily: { "headline": ["Space Grotesk"], "body": ["Manrope"], "label": ["Space Grotesk"] },
+  }},
+}
+</script>
+<style>
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+.neon-glow { text-shadow: 0 0 20px rgba(156, 255, 147, 0.4), 0 0 40px rgba(156, 255, 147, 0.2); }
+body { background-color: #0e0e0e; font-family: 'Manrope', sans-serif; overflow-x: hidden; }
+</style>
+</head>
+<body class="bg-background text-on-surface font-body">
+
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/60 backdrop-blur-2xl">
+<div class="flex justify-between items-center px-4 md:px-8 py-4 max-w-[1440px] mx-auto w-full">
+    <a href="index.html" class="text-xl md:text-2xl font-bold tracking-tighter text-[#9CFF93] font-headline">VĪRA</a>
+    <div class="flex items-center gap-4 md:gap-10">
+        <a class="text-white/70 hover:text-[#9CFF93] transition-colors font-label text-[10px] md:text-xs leading-normal" href="index.html#features">Features</a>
+        <a class="text-white/70 hover:text-[#9CFF93] transition-colors font-label text-[10px] md:text-xs leading-normal" href="index.html#faq">FAQ</a>
+        <a class="text-[#9CFF93] font-bold font-label text-[10px] md:text-xs border-b-2 border-[#9CFF93] leading-normal" href="contact.html">Support</a>
+    </div>
+</div>
+</nav>
+
+<main class="relative min-h-screen flex flex-col items-center justify-center px-4 md:px-6 pt-20 overflow-hidden">
+    <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
+    <section class="relative z-10 w-full max-w-4xl text-center space-y-12 md:space-y-16">
+        <div class="space-y-4">
+            <span class="font-label text-primary uppercase tracking-[0.3em] text-[10px] md:text-xs block mb-2 opacity-80">Support</span>
+            <h1 class="font-headline text-4xl md:text-7xl font-bold tracking-tighter leading-tight">
+                Get in touch.
+            </h1>
+        </div>
+        <div class="py-8 md:py-12">
+            <a class="font-headline text-2xl md:text-5xl font-medium text-primary neon-glow hover:text-white transition-all block" href="mailto:viirasupport@gmail.com">
+                viirasupport@gmail.com
+            </a>
+            <div class="h-[1px] w-full max-w-md mx-auto bg-primary/30 mt-4"></div>
+            <p class="font-body text-on-surface-variant text-sm mt-6">We typically respond within 48 hours.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-8">
+            <div class="bg-surface-container-low p-6 md:p-8 rounded-xl border border-outline-variant/15 text-left space-y-4">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                <h3 class="font-headline text-lg font-bold">Bug Reports</h3>
+                <p class="text-on-surface-variant text-xs leading-relaxed">Found something broken? Let us know and we'll fix it fast.</p>
+            </div>
+            <div class="bg-surface-container-low p-6 md:p-8 rounded-xl border border-outline-variant/15 text-left space-y-4">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+                <h3 class="font-headline text-lg font-bold">Feature Requests</h3>
+                <p class="text-on-surface-variant text-xs leading-relaxed">Got an idea? We're always looking to improve Vīra.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="w-full border-t border-[#494847]/15 bg-[#0E0E0E]">
+<div class="flex flex-col md:flex-row justify-between items-center px-6 md:px-12 py-12 md:py-16 w-full max-w-[1440px] mx-auto gap-6">
+    <div>
+        <div class="text-lg font-bold text-white/90 font-headline">VĪRA</div>
+        <p class="text-white/40 font-body text-xs">&copy; 2026 Brownie Intelligence Labs</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-6 md:gap-8">
+        <a class="text-white/40 hover:text-white transition-colors font-label text-xs" href="privacy.html">Privacy</a>
+        <a class="text-[#9CFF93] font-label text-xs" href="contact.html">Support</a>
+    </div>
+</div>
+</footer>
+</body></html>
